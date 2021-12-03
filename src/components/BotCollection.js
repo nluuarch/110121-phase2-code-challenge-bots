@@ -2,6 +2,7 @@ import React from "react";
 import BotCard from "./BotCard";
 
 
+
 function BotCollection( { bots, handleClick, deleteBot }) {
 
   return (
@@ -12,8 +13,9 @@ function BotCollection( { bots, handleClick, deleteBot }) {
             key={bot.id} 
             bot={bot} 
             handleClick={handleClick} 
-            deleteBot={deleteBot}/>
+            deleteBot={deleteBot}/> 
           ))}
+      
       </div>
     </div>
   );
