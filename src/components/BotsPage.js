@@ -14,7 +14,7 @@ function BotsPage() {
   }, [])
 
   function addBot(bot, inArmy = true){
-    console.log("BILL!")
+    console.log("BOT!")
     setBots(bots.map((b) => b.id === bot.id? {...b, enlisted: inArmy} : b))
   }
 
@@ -29,7 +29,11 @@ function BotsPage() {
   return (
     <div>
       <YourBotArmy bots={bots.filter(b => b.enlisted)} handleClick={removeBot} deleteBot={deleteBot}/>
-      <BotCollection bots={bots} handleClick={addBot} deleteBot={deleteBot}/>
+      <BotCollection 
+        bots={bots} 
+        handleClick={addBot} 
+        deleteBot={deleteBot}
+      />
     </div>
   )
 }
